@@ -62,9 +62,9 @@ protected:
 public:
   /**
     * @brief Sculptor: Init Sculptor class
-    * @param _nx : dimensao em x da escultura 3D (número de linhas)
-    * @param _ny : dimensao em y da escultura 3D (númer de colunas)
-    * @param _nz : dimensao em z da escultura 3D (número de planos)
+    * @param _nx : dimension in x (number of lines)
+    * @param _ny : dimension in y (number of columns)
+    * @param _nz : dimension in z (number of plans)
     */
   Sculptor(int _nx, int _ny, int _nz);
   /**
@@ -93,62 +93,6 @@ public:
     * @param z : z axis coordinate 
     */
   void cutVoxel(int x, int y, int z);
-  /**
-    * @brief putBox :Enables all voxels in the range x∈[x0, x1], y∈[y0, y1], z∈[z0, z1] and assigns them the current drawing color
-    * @param x0 : point 0 in x axis coordinate 
-    * @param x1 : point 1 in x axis coordinate 
-    * @param y0 : point 0 in y axis coordinate 
-    * @param y1 : point 1 in y axis coordinate 
-    * @param z0 : point 0 in z axis coordinate 
-    * @param z1 : point 1 in z axis coordinate 
-    */
-  void putBox(int x0, int x1, int y0, int y1, int z0, int z1);
-  /**
-    * @brief cutBox : Disables all voxels in the range x∈ [x0, x1], y∈ [y0, y1], z∈ [z0, z1] and assigns them the current drawing color
-    * @param x0 : point 0 in x axis coordinate 
-    * @param x1 : point 1 in x axis coordinate 
-    * @param y0 : point 0 in y axis coordinate 
-    * @param y1 : point 1 in y axis coordinate 
-    * @param z0 : point 0 in z axis coordinate 
-    * @param z1 : point 1 in z axis coordinate 
-    */
-  void cutBox(int x0, int x1, int y0, int y1, int z0, int z1);
-  /**
-    * @brief putSphere : Enables all voxels in the range x∈ [x0, x1], y∈ [y0, y1], z∈ [z0, z1] and assigns them the current drawing color
-    * @param xcenter : x axis coordinate 
-    * @param ycenter : y axis coordinate 
-    * @param zcenter : z axis coordinate
-    * @param radius : radius of sphere
-    */
-  void putSphere(int xcenter, int ycenter, int zcenter, int radius);
-  /**
-    * @brief cutSphere : Disables all voxels that satisfy the equation of the sphere
-    * @param xcenter : x axis coordinate 
-    * @param ycenter : y axis coordinate 
-    * @param zcenter : z axis coordinate
-    * @param radius : radius of sphere
-    */
-  void cutSphere(int xcenter, int ycenter, int zcenter, int radius);
-  /**
-    * @brief putEllipsoid : Enables all voxels that satisfy the ellipsoid equation and assigns them the current drawing color
-    * @param xcenter : x axis coordinate 
-    * @param ycenter : y axis coordinate 
-    * @param zcenter : z axis coordinate
-    * @param rx : radius of ellipsoid in x
-    * @param ry : radius of ellipsoid in y
-    * @param rz : radius of ellipsoid in z
-    */
-  void putEllipsoid(int xcenter, int ycenter, int zcenter, int rx, int ry, int rz);
-  /**
-    * @brief cutEllipsoid : Disables all voxels that satisfy the ellipsoid equation
-    * @param xcenter : x axis coordinate 
-    * @param ycenter : y axis coordinate 
-    * @param zcenter : z axis coordinate
-    * @param rx : radius of ellipsoid in x
-    * @param ry : radius of ellipsoid in y
-    * @param rz : radius of ellipsoid in z
-    */
-  void cutEllipsoid(int xcenter, int ycenter, int zcenter, int rx, int ry, int rz);
   /**
     * @brief cleaner : Remove all hide blocks
     */

@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['putbox_11',['putBox',['../classSculptor.html#a311ad7a0fb83fc67ac1f378be8e99fe1',1,'Sculptor']]],
-  ['putellipsoid_12',['putEllipsoid',['../classSculptor.html#a093615b0c2b9b3a17a56300b9b939f39',1,'Sculptor']]],
-  ['putsphere_13',['putSphere',['../classSculptor.html#a794a2b6ee8fc8098fd6150cb46101fc6',1,'Sculptor']]],
-  ['putvoxel_14',['putVoxel',['../classSculptor.html#a4bdea3048b419d58e93074060eaa7b52',1,'Sculptor']]]
+  ['g_10',['g',['../classSculptor.html#a208c06af69a81a1568df4493868816f1',1,'Sculptor']]],
+  ['getdimx_11',['getDimx',['../classFileReader.html#a799759f11669e01dc48425fe77579258',1,'FileReader']]],
+  ['getdimy_12',['getDimy',['../classFileReader.html#ad997ebbd6501df2012b41d9ea92ddf40',1,'FileReader']]],
+  ['getdimz_13',['getDimz',['../classFileReader.html#a7401374da9c3c5df55e33a8a480a738d',1,'FileReader']]]
 ];

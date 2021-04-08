@@ -1,0 +1,23 @@
+digraph "FiguraGeometrica"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="FiguraGeometrica",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="FiguraGeometrica its a abstract class."];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="CutBox",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classCutBox.html",tooltip="Class CutBox disables all voxels in the range x∈ [x0, x1], y∈ [y0, y1], z∈ [z0, z1]."];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="CutEllipsoid",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classCutEllipsoid.html",tooltip="Class CutEllipsoid disables all voxels that satisfy the ellipsoid equation."];
+  Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="CutSphere",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classCutSphere.html",tooltip="Class CutSphere Disables all voxels that satisfy the equation of the sphere;."];
+  Node1 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="CutVoxel",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classCutVoxel.html",tooltip="Class CutVoxel disables the voxel at the (x, y, z) position."];
+  Node1 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="PutBox",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classPutBox.html",tooltip="Class PutBox enables all voxels in the range x∈[x0, x1], y∈[y0, y1], z∈[z0, z1]."];
+  Node1 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="PutEllipsoid",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classPutEllipsoid.html",tooltip="Class PutEllipsoid enables all voxels that satisfy the ellipsoid equation and assigns them the curren..."];
+  Node1 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="PutSphere",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classPutSphere.html",tooltip="Enables all voxels in the range x∈ [x0, x1], y∈ [y0, y1], z∈ [z0, z1]."];
+  Node1 -> Node9 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="PutVoxel",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classPutVoxel.html",tooltip="Class PutVoxel enables the voxel at position (x, y, z) with color (r,g,b,a)"];
+}

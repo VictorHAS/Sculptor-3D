@@ -1,0 +1,71 @@
+\hypertarget{classFiguraGeometrica}{}\doxysection{Figura\+Geometrica Class Reference}
+\label{classFiguraGeometrica}\index{FiguraGeometrica@{FiguraGeometrica}}
+
+
+\mbox{\hyperlink{classFiguraGeometrica}{Figura\+Geometrica}} its a abstract class.  
+
+
+
+
+{\ttfamily \#include $<$figurageometrica.\+h$>$}
+
+
+
+Inheritance diagram for Figura\+Geometrica\+:
+% FIG 0
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classFiguraGeometrica_a40ce7fb4b6cbf0cbe3852e342c739988}\label{classFiguraGeometrica_a40ce7fb4b6cbf0cbe3852e342c739988}} 
+virtual \mbox{\hyperlink{classFiguraGeometrica_a40ce7fb4b6cbf0cbe3852e342c739988}{$\sim$\+Figura\+Geometrica}} ()
+\begin{DoxyCompactList}\small\item\em $\sim$\+Figura\+Geometrica \+: Destructor of class \mbox{\hyperlink{classFiguraGeometrica}{Figura\+Geometrica}} \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classFiguraGeometrica_a140c20d043bc6bfb4952a367d8ed6c1c}{draw}} (\mbox{\hyperlink{classSculptor}{Sculptor}} \&s)=0
+\begin{DoxyCompactList}\small\item\em draw \+: Makes a figure be drawn in Sculpture \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classFiguraGeometrica_a0a4f57efb1a6c525c8aeee34c92e7eab}\label{classFiguraGeometrica_a0a4f57efb1a6c525c8aeee34c92e7eab}} 
+float {\bfseries r}
+\item 
+\mbox{\Hypertarget{classFiguraGeometrica_a51930549bcb90d016b824f10f95df355}\label{classFiguraGeometrica_a51930549bcb90d016b824f10f95df355}} 
+float {\bfseries g}
+\item 
+\mbox{\Hypertarget{classFiguraGeometrica_a25e5d6c21410103c25ec55c0117dac0d}\label{classFiguraGeometrica_a25e5d6c21410103c25ec55c0117dac0d}} 
+float {\bfseries b}
+\item 
+\mbox{\Hypertarget{classFiguraGeometrica_ae7c8a027fcec3c357265b90458a4d165}\label{classFiguraGeometrica_ae7c8a027fcec3c357265b90458a4d165}} 
+float {\bfseries a}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{classFiguraGeometrica}{Figura\+Geometrica}} its a abstract class. 
+
+The class serves to represent geometrical figures in general, where each Class of each type of geometrical figure can be \char`\"{}drawn\char`\"{} in Sculpture. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classFiguraGeometrica_a140c20d043bc6bfb4952a367d8ed6c1c}\label{classFiguraGeometrica_a140c20d043bc6bfb4952a367d8ed6c1c}} 
+\index{FiguraGeometrica@{FiguraGeometrica}!draw@{draw}}
+\index{draw@{draw}!FiguraGeometrica@{FiguraGeometrica}}
+\doxysubsubsection{\texorpdfstring{draw()}{draw()}}
+{\footnotesize\ttfamily virtual void Figura\+Geometrica\+::draw (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classSculptor}{Sculptor}} \&}]{s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+draw \+: Makes a figure be drawn in Sculpture 
+
+
+\begin{DoxyParams}{Parameters}
+{\em s} & Allocated sculpture that will receive the figure \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{classPutBox_a58946137f1741c2c9b7a5bbcc229f5d8}{Put\+Box}}, \mbox{\hyperlink{classPutEllipsoid_a7563e424e3b7560c00c7cc2a3fc16425}{Put\+Ellipsoid}}, \mbox{\hyperlink{classPutSphere_a2c3b27fe4f8041fa6c487b636b2ab017}{Put\+Sphere}}, \mbox{\hyperlink{classPutVoxel_a5bb3d4986a185b22ab050a41c7bb0017}{Put\+Voxel}}, \mbox{\hyperlink{classCutBox_a95d16d1e3164807a1f006614b753e205}{Cut\+Box}}, \mbox{\hyperlink{classCutEllipsoid_a3888e48949c6f89e1fe14bc3f95716fa}{Cut\+Ellipsoid}}, \mbox{\hyperlink{classCutSphere_a8bde72ea67f248b4eec5435c695efcee}{Cut\+Sphere}}, and \mbox{\hyperlink{classCutVoxel_a72bb583540f93f6f5345db1499417716}{Cut\+Voxel}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/figurageometrica.\+h\item 
+src/figurageometrica.\+cpp\end{DoxyCompactItemize}

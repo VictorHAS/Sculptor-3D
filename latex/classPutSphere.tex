@@ -1,0 +1,95 @@
+\hypertarget{classPutSphere}{}\doxysection{Put\+Sphere Class Reference}
+\label{classPutSphere}\index{PutSphere@{PutSphere}}
+
+
+Enables all voxels in the range x∈ \mbox{[}x0, x1\mbox{]}, y∈ \mbox{[}y0, y1\mbox{]}, z∈ \mbox{[}z0, z1\mbox{]}.  
+
+
+
+
+{\ttfamily \#include $<$putsphere.\+h$>$}
+
+
+
+Inheritance diagram for Put\+Sphere\+:
+% FIG 0
+
+
+Collaboration diagram for Put\+Sphere\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classPutSphere_aad7d38e4406ef3cd77c6fd60c0b64e43}{Put\+Sphere}} (int xcenter, int ycenter, int zcenter, int radius, float r, float g, float b, float a)
+\begin{DoxyCompactList}\small\item\em Putsphere \+: Enables all voxels in the range x∈ \mbox{[}x0, x1\mbox{]}, y∈ \mbox{[}y0, y1\mbox{]}, z∈ \mbox{[}z0, z1\mbox{]}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classPutSphere_ab1c65114a718e71349497588ccb3e04b}\label{classPutSphere_ab1c65114a718e71349497588ccb3e04b}} 
+\mbox{\hyperlink{classPutSphere_ab1c65114a718e71349497588ccb3e04b}{$\sim$\+Put\+Sphere}} ()
+\begin{DoxyCompactList}\small\item\em $\sim$\+Put\+Sphere \+: Destructor of class \mbox{\hyperlink{classPutSphere}{Put\+Sphere}} \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classPutSphere_a2c3b27fe4f8041fa6c487b636b2ab017}{draw}} (\mbox{\hyperlink{classSculptor}{Sculptor}} \&s)
+\begin{DoxyCompactList}\small\item\em draw \+: Makes a figure be drawn in Sculpture \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Enables all voxels in the range x∈ \mbox{[}x0, x1\mbox{]}, y∈ \mbox{[}y0, y1\mbox{]}, z∈ \mbox{[}z0, z1\mbox{]}. 
+
+A partir da classe Put\+Esphere, será escrito \char`\"{}putesphere\char`\"{} no arquivo de leitura da escultura dentre os valores\+: centro x, y, z e raio r. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classPutSphere_aad7d38e4406ef3cd77c6fd60c0b64e43}\label{classPutSphere_aad7d38e4406ef3cd77c6fd60c0b64e43}} 
+\index{PutSphere@{PutSphere}!PutSphere@{PutSphere}}
+\index{PutSphere@{PutSphere}!PutSphere@{PutSphere}}
+\doxysubsubsection{\texorpdfstring{PutSphere()}{PutSphere()}}
+{\footnotesize\ttfamily Put\+Sphere\+::\+Put\+Sphere (\begin{DoxyParamCaption}\item[{int}]{xcenter,  }\item[{int}]{ycenter,  }\item[{int}]{zcenter,  }\item[{int}]{radius,  }\item[{float}]{r,  }\item[{float}]{g,  }\item[{float}]{b,  }\item[{float}]{a }\end{DoxyParamCaption})}
+
+
+
+Putsphere \+: Enables all voxels in the range x∈ \mbox{[}x0, x1\mbox{]}, y∈ \mbox{[}y0, y1\mbox{]}, z∈ \mbox{[}z0, z1\mbox{]}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em xcenter} & \+: x axis coordinate \\
+\hline
+{\em ycenter} & \+: y axis coordinate \\
+\hline
+{\em zcenter} & \+: z axis coordinate \\
+\hline
+{\em radius} & \+: radius of sphere \\
+\hline
+{\em r} & \+: red channel \mbox{[}0-\/256\mbox{]} \\
+\hline
+{\em g} & \+: green channel \mbox{[}0-\/256\mbox{]} \\
+\hline
+{\em b} & \+: blue channel \mbox{[}0-\/256\mbox{]} \\
+\hline
+{\em a} & \+: opacity \mbox{[}0-\/1\mbox{]} \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classPutSphere_a2c3b27fe4f8041fa6c487b636b2ab017}\label{classPutSphere_a2c3b27fe4f8041fa6c487b636b2ab017}} 
+\index{PutSphere@{PutSphere}!draw@{draw}}
+\index{draw@{draw}!PutSphere@{PutSphere}}
+\doxysubsubsection{\texorpdfstring{draw()}{draw()}}
+{\footnotesize\ttfamily void Put\+Sphere\+::draw (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classSculptor}{Sculptor}} \&}]{s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+draw \+: Makes a figure be drawn in Sculpture 
+
+
+\begin{DoxyParams}{Parameters}
+{\em s} & Allocated sculpture that will receive the figure \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classFiguraGeometrica_a140c20d043bc6bfb4952a367d8ed6c1c}{Figura\+Geometrica}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/putsphere.\+h\item 
+src/putsphere.\+cpp\end{DoxyCompactItemize}

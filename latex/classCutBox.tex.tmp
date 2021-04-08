@@ -1,0 +1,89 @@
+\hypertarget{classCutBox}{}\doxysection{Cut\+Box Class Reference}
+\label{classCutBox}\index{CutBox@{CutBox}}
+
+
+Class \mbox{\hyperlink{classCutBox}{Cut\+Box}} disables all voxels in the range x∈ \mbox{[}x0, x1\mbox{]}, y∈ \mbox{[}y0, y1\mbox{]}, z∈ \mbox{[}z0, z1\mbox{]}.  
+
+
+
+
+{\ttfamily \#include $<$cutbox.\+h$>$}
+
+
+
+Inheritance diagram for Cut\+Box\+:
+% FIG 0
+
+
+Collaboration diagram for Cut\+Box\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classCutBox_a0e7e856f22e31926719bef5a69685051}{Cut\+Box}} (int x0, int x1, int y0, int y1, int z0, int z1)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classCutBox}{Cut\+Box}} \+: Defines box. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classCutBox_a66d4f54307d42a20c7ad8aa860ede5bf}\label{classCutBox_a66d4f54307d42a20c7ad8aa860ede5bf}} 
+\mbox{\hyperlink{classCutBox_a66d4f54307d42a20c7ad8aa860ede5bf}{$\sim$\+Cut\+Box}} ()
+\begin{DoxyCompactList}\small\item\em $\sim$\+Cut\+Box \+: Destructor of class \mbox{\hyperlink{classCutBox}{Cut\+Box}} \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classCutBox_a95d16d1e3164807a1f006614b753e205}{draw}} (\mbox{\hyperlink{classSculptor}{Sculptor}} \&s)
+\begin{DoxyCompactList}\small\item\em draw \+: Makes a figure be drawn in Sculpture \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Class \mbox{\hyperlink{classCutBox}{Cut\+Box}} disables all voxels in the range x∈ \mbox{[}x0, x1\mbox{]}, y∈ \mbox{[}y0, y1\mbox{]}, z∈ \mbox{[}z0, z1\mbox{]}. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classCutBox_a0e7e856f22e31926719bef5a69685051}\label{classCutBox_a0e7e856f22e31926719bef5a69685051}} 
+\index{CutBox@{CutBox}!CutBox@{CutBox}}
+\index{CutBox@{CutBox}!CutBox@{CutBox}}
+\doxysubsubsection{\texorpdfstring{CutBox()}{CutBox()}}
+{\footnotesize\ttfamily Cut\+Box\+::\+Cut\+Box (\begin{DoxyParamCaption}\item[{int}]{x0,  }\item[{int}]{x1,  }\item[{int}]{y0,  }\item[{int}]{y1,  }\item[{int}]{z0,  }\item[{int}]{z1 }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{classCutBox}{Cut\+Box}} \+: Defines box. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x0} & \+: point 0 in x axis coordinate \\
+\hline
+{\em x1} & \+: point 1 in x axis coordinate \\
+\hline
+{\em y0} & \+: point 0 in y axis coordinate \\
+\hline
+{\em y1} & \+: point 1 in y axis coordinate \\
+\hline
+{\em z0} & \+: point 0 in z axis coordinate \\
+\hline
+{\em z1} & \+: point 1 in z axis coordinate \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classCutBox_a95d16d1e3164807a1f006614b753e205}\label{classCutBox_a95d16d1e3164807a1f006614b753e205}} 
+\index{CutBox@{CutBox}!draw@{draw}}
+\index{draw@{draw}!CutBox@{CutBox}}
+\doxysubsubsection{\texorpdfstring{draw()}{draw()}}
+{\footnotesize\ttfamily void Cut\+Box\+::draw (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classSculptor}{Sculptor}} \&}]{s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+draw \+: Makes a figure be drawn in Sculpture 
+
+
+\begin{DoxyParams}{Parameters}
+{\em s} & Allocated sculpture that will receive the figure \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classFiguraGeometrica_a140c20d043bc6bfb4952a367d8ed6c1c}{Figura\+Geometrica}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/cutbox.\+h\item 
+src/cutbox.\+cpp\end{DoxyCompactItemize}

@@ -62,207 +62,6 @@ void Sculptor::cutVoxel(int x, int y, int z)
   v[x][y][z].isOn = false;
 }
 
-// Enables all voxels in the range x∈[x0, x1], y∈[y0, y1], z∈[z0, z1] and assigns them the current drawing color
-void Sculptor::putBox(int x0, int x1, int y0, int y1, int z0, int z1)
-{
-  for (int z = z0; z <= z1; z++)
-  { // traversing plans
-    for (int y = y0; y <= y1; y++)
-    { // traversing columns
-      for (int x = x0; x <= x1; x++)
-      { //traversing lines
-
-        putVoxel(x, y, z); // enables voxel
-      }
-    }
-  }
-}
-
-// Disables all voxels in the range x∈ [x0, x1], y∈ [y0, y1], z∈ [z0, z1] and assigns them the current drawing color
-void Sculptor::cutBox(int x0, int x1, int y0, int y1, int z0, int z1)
-{
-  for (int z = z0; z <= z1; z++)
-  {
-    for (int x = x0; x <= x1; x++)
-    {
-      for (int y = y0; y <= y1; y++)
-      {
-        cutVoxel(x, y, z); // disables voxel
-      }
-    }
-  }
-}
-
-// Enables all voxels in the range x∈ [x0, x1], y∈ [y0, y1], z∈ [z0, z1] and assigns them the current drawing color
-void Sculptor::putSphere(int xcenter, int ycenter, int zcenter, int radius)
-{
-  double distance;
-  for (int z = 0; z <= nz; z++)
-  {
-    for (int y = 0; y <= ny; y++)
-    {
-      for (int x = 0; x <= nz; x++)
-      {
-        distance = pow(x - xcenter, 2) + pow(y - ycenter, 2) + pow(z - zcenter, 2);
-        if (distance <= pow(radius, 2))
-        {
-          putVoxel(x, y, z);
-        }
-      }
-    }
-  }
-}
-
-// Disables all voxels that satisfy the equation of the sphere
-void Sculptor::cutSphere(int xcenter, int ycenter, int zcenter, int radius)
-{
-  double distance;
-  for (int z = 0; z <= nz; z++)
-  {
-    for (int y = 0; y <= ny; y++)
-    {
-      for (int x = 0; x <= nx; x++)
-      {
-        distance = pow(x - xcenter, 2) + pow(y - ycenter, 2) + pow(z - zcenter, 2);
-        if (distance <= pow(radius, 2))
-        {
-          cutVoxel(x, y, z);
-        }
-      }
-    }
-  }
-}
-
-// Enables all voxels that satisfy the ellipsoid equation and assigns them the current drawing color
-void Sculptor::putEllipsoid(int xcenter, int ycenter, int zcenter, int rx, int ry, int rz)
-{
-  double distance;
-  if (rx == 0)
-  {
-    for (int z = 0; z <= nz; z++)
-    {
-      for (int y = 0; y <= ny; y++)
-      {
-        distance = (pow(y - ycenter, 2) / pow(ry, 2)) + (pow(z - zcenter, 2) / pow(rz, 2));
-        if (distance <= 1)
-        {
-          putVoxel(xcenter, y, z);
-        }
-      }
-    }
-  }
-  else if (ry == 0)
-  {
-    for (int z = 0; z <= nz; z++)
-    {
-      for (int x = 0; x <= nx; x++)
-      {
-        distance = (pow(x - xcenter, 2) / pow(rx, 2)) + (pow(z - zcenter, 2) / pow(rz, 2));
-        if (distance <= 1)
-        {
-          putVoxel(x, ycenter, z);
-        }
-      }
-    }
-  }
-  else if (rz == 0)
-  {
-    for (int x = 0; x <= nx; x++)
-    {
-      for (int y = 0; x <= ny; y++)
-      {
-        distance = (pow(x - xcenter, 2) / pow(rx, 2)) + (pow(y - ycenter, 2) / pow(ry, 2));
-        if (distance <= 1)
-        {
-          putVoxel(x, y, zcenter);
-        }
-      }
-    }
-  }
-  else
-  {
-    for (int z = 0; z <= nz; z++)
-    {
-      for (int y = 0; y <= ny; y++)
-      {
-        for (int x = 0; x <= ny; x++)
-        {
-          distance = (pow(x - xcenter, 2) / pow(rx, 2)) + (pow(y - ycenter, 2) / pow(rz, 2)) + (pow(z - zcenter, 2) / pow(rz, 2));
-          if (distance <= 1)
-          {
-            putVoxel(x, y, z);
-          }
-        }
-      }
-    }
-  }
-}
-
-// Disables all voxels that satisfy the ellipsoid equation
-void Sculptor::cutEllipsoid(int xcenter, int ycenter, int zcenter, int rx, int ry, int rz)
-{
-  double distance;
-  if (rx == 0)
-  {
-    for (int z = 0; z <= nz; z++)
-    {
-      for (int y = 0; y <= ny; y++)
-      {
-        distance = pow(y - ycenter, 2) / pow(ry, 2) + pow(z - zcenter, 2) / pow(rz, 2);
-        if (distance <= 1)
-        {
-          cutVoxel(xcenter, y, z);
-        }
-      }
-    }
-  }
-  else if (ry == 0)
-  {
-    for (int z = 0; z <= nz; z++)
-    {
-      for (int x = 0; x <= nx; x++)
-      {
-        distance = pow(x - xcenter, 2) / pow(rx, 2) + pow(z - zcenter, 2) / pow(rz, 2);
-        if (distance <= 1)
-        {
-          cutVoxel(x, ycenter, z);
-        }
-      }
-    }
-  }
-  else if (rz == 0)
-  {
-    for (int x = 0; x <= nx; x++)
-    {
-      for (int y = 0; x <= ny; y++)
-      {
-        distance = pow(x - xcenter, 2) / pow(rx, 2) + pow(y - ycenter, 2) / pow(ry, 2);
-        if (distance <= 1)
-        {
-          cutVoxel(x, y, zcenter);
-        }
-      }
-    }
-  }
-  else
-  {
-    for (int z = 0; z <= nz; z++)
-    {
-      for (int x = 0; x <= nx; x++)
-      {
-        for (int y = 0; y <= ny; y++)
-        {
-          distance = pow(x - xcenter, 2) / pow(rx, 2) + pow(y - ycenter, 2) / pow(rz, 2) + pow(z - zcenter, 2) / pow(rz, 2);
-          if (distance <= 1)
-          {
-            cutVoxel(x, y, z);
-          }
-        }
-      }
-    }
-  }
-}
-
 void Sculptor::cleaner()
 {
 
@@ -281,7 +80,7 @@ void Sculptor::cleaner()
       }
     }
   }
-  cout << "Hide blocks removed: " << removedBlocksCount << endl;
+  cout << "Blocos ocultos removidos: " << removedBlocksCount << endl;
 }
 
 void Sculptor::writeOFF(char *filename)
@@ -373,7 +172,7 @@ void Sculptor::writeOFF(char *filename)
 
   if (f.is_open())
   {
-    cout << "Arquivo.OFF salvo!" << endl;
+    cout << "Arquivo OFF salvo!" << endl;
     f.close();
   }
 }
